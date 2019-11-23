@@ -1,5 +1,8 @@
 import numpy as np
 
+def main():
+    mapwordstofile()
+
 def mapwordstofile():
     d = {}
     i = 0
@@ -12,3 +15,7 @@ def mapwordstofile():
             pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)   
     np.save('WordMap.npy', d)
     print("Word Map Updated")
+
+
+if __name__ == "__main__":
+    main()

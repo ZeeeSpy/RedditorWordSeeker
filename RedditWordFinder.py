@@ -27,6 +27,9 @@ reddit = praw.Reddit(client_id= os.getenv("ID"), \
 textinput = input("Update WordMap? Y/N:")
 if (textinput == "Y" or textinput == "y"):
     WordMapper.mapwordstofile()
+    print("New Words Mapped")
+else:
+    print("Old Map Used")
 
 #load wordmap
 WordsToFind = np.load('WordMap.npy',allow_pickle='TRUE').item()
