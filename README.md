@@ -1,2 +1,2 @@
-# RedditorWordSeeker
-Use Reddit's API to find given words within a users past 1000 comments. 
+# Redcit
+Searches a reddit user's past 1000 posts to find racist/inflammatory language
