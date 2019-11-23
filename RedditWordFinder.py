@@ -13,15 +13,13 @@ BASEDIR = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(BASEDIR,".env"))
 #env is in same directory
 
-reddit = praw.Reddit(client_id= os.getenv("ID"), \
-                     client_secret= os.getenv("SECRET"), \
-                     user_agent=os.getenv("AGENT"), \
-                     username= os.getenv("USER"), \
-                     password= os.getenv("PASS"))
+reddit = praw.Reddit(client_id=os.getenv("ID"),
+                     client_secret=os.getenv("SECRET"),
+                     user_agent=os.getenv("AGENT"))
 #set up API
 #For some reason dotenv doesn't like hyphens in .env values 
-#So now everyone knows my username is "Ze-Spy"
-
+print("Connected To Reddit:",reddit.read_only)
+#check if connected
 
 #update wordmap
 textinput = input("Update WordMap? Y/N:")
@@ -61,6 +59,6 @@ for comment in redditor.comments.new(limit=None):
 #summerize words found in comment history
 if (foundsomething == 1):
     for i in WordsToFind:
-        print (i, WordsToFind[i])
+        print (i ,":", WordsToFind[i])
 else: 
     print (textinput+" is clean")
