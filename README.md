@@ -13,3 +13,10 @@ Loosely based off the nwordcountbot, but with the ability to find any words. as 
 - Run RedditWordFinder.py with python3. 
 
 You'll need a reddit account, python and the following libraries; PRAW, PANDAS, numpy, dotenv. Just use "pip3 install LIBRARYNAME" to get them. 
+
+If your reddit username has a hyphen in it like "Ze-Spy" for example, you'll have to manually add it into RedditWordFinder.py
+
+so instead of it being
+username= os.getenv("USER"), \
+it should 
+username= "YOUR USERNAME HERE", \

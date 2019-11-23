@@ -16,7 +16,7 @@ load_dotenv(os.path.join(BASEDIR,".env"))
 reddit = praw.Reddit(client_id= os.getenv("ID"), \
                      client_secret= os.getenv("SECRET"), \
                      user_agent=os.getenv("AGENT"), \
-                     username= os.getenv("Ze-Spy"), \
+                     username= os.getenv("USER"), \
                      password= os.getenv("PASS"))
 #set up API
 #For some reason dotenv doesn't like hyphens in .env values 
